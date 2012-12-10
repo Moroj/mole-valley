@@ -1,0 +1,42 @@
+/* layout.css
+*
+*Basic Styling for the static pages
+*
+*/
+
+
+div#container {
+	display: block;
+	position: relative;
+	min-height: auto;
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: #E2F3E2;
+}
+
+header#page_header {
+			background-color: #049D04;
+			color: #FFFFFF;
+			padding: 1px; 
+}
+
+nav#utility {
+	background-color: #049D04;
+	float: right;
+	font-size: 1em;
+}
+
+nav#main_nav {
+	background-color: #049D04;
+}
+
+footer#page_footer{
+	background-color: #049D04;
+	color: #FFFFFF;
+	text-align: center;
+	position: relative;
+	margin-top: 30px; 
+	height: 30px;
+	clear:both;
+}

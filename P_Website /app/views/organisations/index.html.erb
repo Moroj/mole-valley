@@ -1,0 +1,32 @@
+<section id="list">
+<h1>Listing Organisations</h1>
+
+<table border='1' align='center' cellpadding='5'>
+  <tr>
+    <th>Title</th>
+    <th>Description</th> 
+    <th></th>
+<% if user_signed_in?%> 
+    <th></th>
+    <th></th>
+<%end%>
+  </tr>
+
+<% @organisations.each do |organisation| %>
+  <tr>
+    <td><%= organisation.title %></td>
+    <td><%= organisation.description %></td>
+    <td><%= link_to 'Show', organisation %></td>
+	<% if user_signed_in?%> 
+    <td><%= link_to 'Edit', edit_organisation_path(organisation) %></td>
+    <td><%= link_to 'Destroy', organisation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+	<%end%>
+<% end %>
+</table>
+
+<br />
+<% if user_signed_in?%> 
+<%= link_to 'New Organisation', new_organisation_path %>
+<%end%>
+</section>
